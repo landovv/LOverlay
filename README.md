@@ -9,7 +9,7 @@ A modern media overlay for Windows with a glass-like interface, smooth animation
 ## Preview
 
 <p align="center">
-  <img src=".github/images/screen.png" width="700">
+  <img src=".github/images/demo.gif" width="700">
 </p>
 
 ---
