@@ -1,0 +1,49 @@
+{
+  "name": "loverlay",
+  "version": "1.0.0",
+  "description": "Enhanced system overlay for Windows",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.0.0"
+  },
+  "build": {
+    "appId": "com.landovv.loverlay",
+    "productName": "LOverlay",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "node_modules/**/*",
+      "resources/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "resources/cpp",
+        "to": "resources/cpp"
+      },
+      {
+        "from": "thumbnail_fetcher.py",
+        "to": "thumbnail_fetcher.py"
+      },
+      {
+        "from": "requirements.txt",
+        "to": "requirements.txt"
+      }
+    ],
+    "win": {
+    "target": "nsis",
+    "icon": "build/icon.png",
+    "requestedExecutionLevel": "requireAdministrator"
+}
+  },
+  "allowScripts": {
+    "electron@28.3.3": true
+  }
+}
